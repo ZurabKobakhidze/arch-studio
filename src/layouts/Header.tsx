@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import { Hamburger, Logo } from "../svg";
 
 const Header = () =>{
-return <HeaderElement></HeaderElement>
+return <HeaderElement>
+    <Logo />
+    <Hamburger />
+</HeaderElement>
 }
 
 export default Header;
@@ -11,4 +15,5 @@ const HeaderElement = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 32px;
 `;
