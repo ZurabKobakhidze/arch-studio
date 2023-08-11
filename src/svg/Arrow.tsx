@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
-const Hamburger = () => {
+const Logo = () => {
   return (
     <Svg>
-      <g fill="#1B1D23" fillRule="evenodd">
-        <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+      <g fill="none" fillRule="evenodd" stroke="#1B1D23" stroke-width="2">
+        <path d="M15 1l9 9-9 9M0 10h24" />
       </g>
     </Svg>
   );
 };
 
-export default Hamburger;
+export default Logo;
 
 const attrs = styled.svg.attrs({
   xmlns: "http://www.w3.org/2000/svg",
 })``;
 
 const Svg = styled(attrs)`
-  width: 24px;
-  height: 17px;
+  width: 26px;
+  height: 20px;
   cursor: pointer;
 `;
