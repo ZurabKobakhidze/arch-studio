@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Hamburger, Logo } from "../svg";
+import { Link } from "react-router-dom";
 
 const Header = () =>{
 return <HeaderElement>
-    <Logo dark={true} />
+    <Link to="/"><Logo dark={true} /></Link>
+    
     <Hamburger />
 </HeaderElement>
 }

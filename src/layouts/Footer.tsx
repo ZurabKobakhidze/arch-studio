@@ -1,24 +1,35 @@
 import { Arrow, Logo } from "@/svg";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Footer = () => {
-  return (
-    <FooterDiv>
-      <LogoBox>
-        <Logo dark={false} />
-      </LogoBox>
-      <FooterMenu>
-        <FooterLinkItem>Portfolio</FooterLinkItem>
-        <FooterLinkItem>About Us</FooterLinkItem>
-        <FooterLinkItem>Contact</FooterLinkItem>
-      </FooterMenu>
-      <SeePortfolio>
-        <Text>See Our Portfolio</Text>
-        <Arrow dark={false} />
-      </SeePortfolio>
-    </FooterDiv>
-  );
-};
+    return (
+      <FooterDiv>
+        <Link to="/">
+          <LogoBox>
+            <Logo dark={false} />
+          </LogoBox>
+        </Link>
+        <FooterMenu>
+          <Link to="/portfolio" style={{ textDecoration: "none" }}>
+            <FooterLinkItem>Portfolio</FooterLinkItem>
+          </Link>
+          <Link to="/about" style={{ textDecoration: "none" }}>
+            <FooterLinkItem>About Us</FooterLinkItem>
+          </Link>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            <FooterLinkItem>Contact</FooterLinkItem>
+          </Link>
+        </FooterMenu>
+        <Link to="/portfolio" style={{ textDecoration: "none" }}>
+          <SeePortfolio>
+            <Text>See Our Portfolio</Text>
+            <Arrow dark={false} />
+          </SeePortfolio>
+        </Link>
+      </FooterDiv>
+    );
+  };
 
 export default Footer;
 
