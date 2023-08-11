@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Footer, Header } from "./layouts";
 import Routing from "./Routing";
-import { Header } from "./layouts";
+
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Header />
         <Routing />
       </Wrapper>
+      <Footer />
     </Main>
   );
 }
