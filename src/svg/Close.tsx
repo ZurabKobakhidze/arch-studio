@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Linkedin = () => {
+const Close: React.FC<{ clickHandler: () => void }> = ({ clickHandler }) =>{
   return (
-    <Svg >
+    <Svg onClick={clickHandler}>
       <path
         fill="#1B1D23"
         fillRule="evenodd"
@@ -12,7 +12,7 @@ const Linkedin = () => {
   );
 };
 
-export default Linkedin;
+export default Close;
 
 const attrs = styled.svg.attrs({
   xmlns: "http://www.w3.org/2000/svg",

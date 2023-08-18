@@ -1,23 +1,42 @@
 import styled from "styled-components";
-import { Hamburger, Logo } from "../svg";
+import { Close, Hamburger, Logo } from "../svg";
 import { Link } from "react-router-dom";
 import { Backdrop } from "@/components";
+import { useState } from "react";
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+
+  const openMenu = () => {
+    setShow(true);
+  };
+
+  const closeMenu = () => {
+    setShow(false);
+  };
+
   return (
     <HeaderElement>
       <Link to="/">
         <Logo dark={true} />
       </Link>
-      <Hamburger />
+      {!show ? <Hamburger clickHandler={openMenu} /> : <Close clickHandler={closeMenu} />}
 
-      <Backdrop>
-        <MenuBox>
-          <Link to="/Portfolio" style={{textDecoration: "none"}}><Text>Portfolio</Text></Link>
-          <Link to="/About" style={{textDecoration: "none"}}><Text>About Us</Text></Link>
-          <Link to="/Contact" style={{textDecoration: "none"}}><Text>Contact</Text></Link>
-        </MenuBox>
-      </Backdrop>
+      {show ? (
+        <Backdrop>
+          <MenuBox>
+            <Link to="/Portfolio" style={{ textDecoration: "none" }}>
+              <Text>Portfolio</Text>
+            </Link>
+            <Link to="/About" style={{ textDecoration: "none" }}>
+              <Text>About Us</Text>
+            </Link>
+            <Link to="/Contact" style={{ textDecoration: "none" }}>
+              <Text>Contact</Text>
+            </Link>
+          </MenuBox>
+        </Backdrop>
+      ) : null}
     </HeaderElement>
   );
 };
@@ -25,7 +44,7 @@ const Header = () => {
 export default Header;
 
 const HeaderElement = styled.header`
-   width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
