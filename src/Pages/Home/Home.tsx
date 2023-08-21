@@ -1,4 +1,4 @@
-import { HomeBanner } from "@/components";
+import { HomeBanner, Info } from "@/components";
 import { paramourMobile, teamMobile } from "@/assets";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ const Home = () => {
           desktop: paramourMobile,
         }}
       />
-      
+      <Info/>
       <HomeBanner
         title="Small team, big ideas"
         buttonText="About Us"

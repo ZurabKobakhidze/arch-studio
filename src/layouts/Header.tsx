@@ -25,13 +25,13 @@ const Header = () => {
       {show ? (
         <Backdrop>
           <MenuBox>
-            <Link to="/Portfolio" style={{ textDecoration: "none" }}>
+            <Link to="/Portfolio" style={{ textDecoration: "none" }} onClick={closeMenu}>
               <Text>Portfolio</Text>
             </Link>
-            <Link to="/About" style={{ textDecoration: "none" }}>
+            <Link to="/About" style={{ textDecoration: "none" }} onClick={closeMenu}>
               <Text>About Us</Text>
             </Link>
-            <Link to="/Contact" style={{ textDecoration: "none" }}>
+            <Link to="/Contact" style={{ textDecoration: "none" }} onClick={closeMenu}>
               <Text>Contact</Text>
             </Link>
           </MenuBox>
