@@ -1,4 +1,4 @@
-import { HomeBanner, Info } from "@/components";
+import { HomeBanner, Info, Projects } from "@/components";
 import { paramourMobile, teamMobile } from "@/assets";
 import styled from "styled-components";
 
@@ -28,7 +28,7 @@ const Home = () => {
           desktop: teamMobile,
         }}
       />
-     
+     <Projects />
     </Main>
   );
 };

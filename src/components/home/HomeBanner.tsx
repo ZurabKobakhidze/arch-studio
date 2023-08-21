@@ -74,7 +74,6 @@ const TextsBox = styled.div(
 const BannerTitle = styled.h2`
   font-size: 48px;
   font-style: normal;
-  font-family: League Spartan;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: -1.2px;
@@ -84,7 +83,6 @@ const BannerTitle = styled.h2`
 const BannerDescription = styled.h3`
   color: #fff;
   font-size: 18px;
-  font-family: League Spartan;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -104,7 +102,6 @@ const ButtonBox = styled.button`
 const Text = styled.h3`
   font-size: 18px;
   font-style: normal;
-  font-family: League Spartan;
   font-weight: 700;
   line-height: 25px;
   color: white;
